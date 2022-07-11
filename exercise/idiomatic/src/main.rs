@@ -13,12 +13,10 @@ use std::f32::consts::PI;
 fn count_to_5() -> i32 {
     let mut number: i32 = 0;
 
-    loop {
-        if number > PI as i32 && number > 5 {
-            break;
-        }
+    while number <= PI as i32 || number <= 5 {
         number += 1;
     }
+
     5
 }
 
