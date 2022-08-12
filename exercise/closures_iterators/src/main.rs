@@ -16,15 +16,17 @@ fn main() {
     // (0, 1), it should return (1, 1). Run the code and make sure it works.
 
     let pairs = vec![(0, 1), (2, 3), (4, 5)];
-    // pairs
-    //     .into_iter()
-    //     .map(|a: (i32, i32)| (a.0 + 1, a.1))
-    //     // .map(|(x, y)| (x + 1, y))
-    //     .for_each(|t| println!("{:?}", t));
+    // Solution A
+    pairs
+        .into_iter()
+        .map(|a: (i32, i32)| (a.0 + 1, a.1))
+        // .map(|(x, y)| (x + 1, y))
+        .for_each(|t| println!("{:?}", t));
 
-    for (x, y) in pairs {
-        println!("{:?}", (x + 1, y));
-    }
+    // Solution B
+    // for (x, y) in pairs {
+    //     println!("{:?}", (x + 1, y));
+    // }
 
     // 3. Uncomment the code below. There is a mutable vector named `numbers`. Use an iterator over
     // mutable references to multiply each of the values in `numbers` by 3.
