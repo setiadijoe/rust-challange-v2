@@ -3,7 +3,7 @@ pub fn sploosh(x: i32, y: i32, z: i32) -> i32 {
         (x, _, _) if x < 0 => 99,
         (1, 2, 3) => 4,
         (5, 6, 7) => 3,
-        (x, y, z) => x + y - z,
+        _ => x + y - z,
     }
 }
 
@@ -29,7 +29,7 @@ mod test {
     // Hint: Don't forget the `#[test]` attribute for your test function!
     #[test]
     fn test_sploosh_condition() {
-        assert_eq!(sploosh(-1, 2, 3), 99);
+        assert_eq!(sploosh(-1, 1, 1), 99);
         assert_eq!(sploosh(1,2,3), 4);
         assert_ne!(sploosh(5, 6, 7), 4);
     }
